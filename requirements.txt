@@ -1,0 +1,34 @@
+# Sistema de Control de Calidad - Productos de Cómputo
+# Backend Flask con Deep Learning
+# ============================================
+
+# Flask y extensiones
+Flask==3.0.0
+Flask-CORS==4.0.0
+Werkzeug==3.0.1
+
+# Procesamiento de imágenes
+Pillow==10.1.0
+numpy==1.24.3
+opencv-python==4.8.1.78
+
+# ==== DESCOMENTAR SEGÚN LOS MODELOS QUE USES ====
+
+# Para YOLO11 (Ultralytics)
+# ultralytics==8.0.200
+# opencv-python==4.8.1.78
+
+# Para EfficientNetV2 (TensorFlow/Keras)
+# tensorflow==2.15.0
+# keras==2.15.0
+# tensorflow-gpu==2.15.0  # Solo si tienes GPU NVIDIA con CUDA
+
+# Para DETR (PyTorch + HuggingFace Transformers)
+# torch==2.1.0
+# torchvision==0.16.0
+# transformers==4.35.0
+# timm==0.9.12
+
+# Utilidades adicionales
+python-dateutil==2.8.2
+requests==2.31.0

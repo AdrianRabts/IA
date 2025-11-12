@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Control de Calidad - Productos de Cómputo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header-content">
+                <div class="header-left">
+                    <h1>🏭 Sistema de Control de Calidad</h1>
+                    <p>Clasificación Automatizada de Productos de Cómputo mediante Deep Learning</p>
+                </div>
+                <div class="header-right">
+                    <div class="status-badge">🟢 Sistema Operativo</div>
+                    <div class="inspection-count">Inspecciones: <span id="inspectionCount">0</span></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Layout Principal -->
+        <div class="main-layout">
+            <!-- Panel de Control -->
+            <div class="control-panel">
+                <div class="card">
+                    <h2 class="section-title">📤 Cargar Producto</h2>
+                    
+                    <div class="upload-zone" id="uploadZone">
+                        <div class="upload-icon">📷</div>
+                        <div class="upload-text">
+                            <strong>Arrastra la imagen del producto</strong><br>
+                            o haz clic para seleccionar<br>
+                            <small style="color: #999;">Formatos: JPG, PNG, BMP (Máx. 16MB)</small>
+                        </div>
+                        <input type="file" id="fileInput" accept="image/*">
+                    </div>
+
+                    <div class="preview-container" id="previewContainer">
+                        <img id="imagePreview" class="image-preview" alt="Vista previa">
+                    </div>
+
+                    <button class="btn btn-primary" id="inspectBtn" disabled>
+                        🔍 Iniciar Inspección
+                    </button>
+                </div>
+
+                <div class="card info-panel">
+                    <h4>🏗️ Arquitecturas Implementadas</h4>
+                    <ul>
+                        <li>YOLO11 - Detección ultrarrápida</li>
+                        <li>EfficientNetV2 - Alta precisión</li>
+                        <li>DETR - Detection Transformer</li>
+                    </ul>
+                </div>
+
+                <div class="card info-panel">
+                    <h4>📦 Productos Soportados</h4>
+                    <ul>
+                        <li>CPU, GPU, Motherboards</li>
+                        <li>Periféricos (Mouse, Teclado)</li>
+                        <li>Arduino, Raspberry Pi</li>
+                        <li>Memoria RAM, SSD, HDD</li>
+                        <li>Fuentes, Coolers, Cables</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Panel de Resultados -->
+            <div class="card results-panel">
+                <h2>📊 Resultados de Inspección</h2>
+
+                <!-- Loading -->
+                <div class="loading-overlay" id="loadingOverlay">
+                    <div class="spinner"></div>
+                    <div class="loading-text">Procesando con las 3 arquitecturas...</div>
+                </div>
+
+                <!-- No Results -->
+                <div class="no-results" id="noResults">
+                    ⬆️ Carga una imagen del producto y presiona "Iniciar Inspección"
+                </div>
+
+                <!-- Veredicto Final -->
+                <div class="final-verdict" id="finalVerdict"></div>
+
+                <!-- Grid de Arquitecturas -->
+                <div class="architectures-grid" id="architecturesGrid"></div>
+
+                <!-- Recomendaciones -->
+                <div class="recommendations" id="recommendations"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
